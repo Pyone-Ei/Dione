@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image" href="image/Screenshot 2023-04-18 at 21.56.07.png">
+    <title>Home Page</title>
+    <style>
+        *{
+            font-family: sans-serif;
+        }
+        .dropdown:hover .dropdown-menu{
+            display: block;
+        }
+        .dropdown-menu{
+            background-color: rgb(240, 228, 240);
+            width: 490px;
+            }
+        .dropdown-item a{
+            font-size: 10px;
+            font-weight: bold;
+            
+        }
+        .dropdown-item:hover{
+            color: rgb(85, 19, 129);
+            text-decoration: 2px underline;
+        }
+        .bg-image{
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .header{
+            height: 430px;
+            padding: 130px;
+            text-align: left;
+            word-spacing: 8px;
+        }
+        .body p{
+            word-spacing: 10px;
+            line-height: 22px;
+            font-size: 13px;
+        }
+        h3,h4,h5,h6,p{
+            color: white;
+        }
+        .container p{
+            font-weight: 22px;
+            font-family: "Lucida Console", Courier, monospace;
+        }
+        .zodiac{ 
+            margin-bottom: 15px; 
+            padding: 0 20px 0 20px;
+        }
+        .zodiac img{
+            width: 220px;
+        }
+        .zodiac a{
+            text-decoration: none;
+        }
+        .zodiac p{
+            font-family: sans-serif;
+        }
+        .zodiac:hover{
+            color: rgb(85, 19, 129);
+            text-decoration: 2px underline;
+        }
+        input[type=text]{
+            background-color: black;
+            border: none;
+            border-bottom: 2px dotted white;
+            font-family: monospace;
+            color: white;
+        }
+        .btn{
+            border: 1px solid white;
+            padding: 5px 20px 5px 20px;
+            color: white;
+        }
+        .btn:hover{
+            color: black;
+            background-color: white;
+        }
+        .btn-2{
+            border: 1px solid white;
+            border-radius: 7px;
+            background-color: transparent;
+            color: white;
+            padding: 5px 25px 5px 25px;
+        }
+        .btn-2 a{
+            color: white;
+            text-decoration: none;
+        }
+        .link-2 li a{
+            text-decoration: none;
+            border: 1px solid white;
+            border-radius: 5px;
+            background-color: transparent;
+            padding: 10px 15px 10px 15px;
+            color: white;
+            margin: 0 40px 0 30px;
+        }
+        .link-2 li{
+            margin-bottom: 25px;
+        }
+        .carousel{
+            text-align: center;
+        }
+        .carousel-item img{
+            width: 200px;
+            height: 180px;
+            margin: 5px 20px 10px 20px;
+        }
+        .carousel-item.img2 img{
+            width: 220px;
+            height: 200px;
+        } 
+       ul.link li a{
+            text-decoration: none;
+            padding:0  23px 0 10px;
+            color: white;
+        }
+        .link-2 ul{
+            margin: 0 60px 0 50px;
+        }
+         ul li{
+            display: inline-block; 
+            margin-top:7px ;
+        }
+        footer{
+	        
+            padding-top: 20px;
+        }
+        .text_col small {
+	        color: #fff;
+	        line-height: 1.9;
+        }
+        .text_col h3 {
+	        font-size: 16px;
+	        color: #fff;
+        }
+        .text_col p {
+            color: white;
+            line-height: 2.0;
+            font-family: 'Abel', sans-serif;
+        }
+        .text_col ul {
+	        padding: 0;
+            font-family: 'Abel', sans-serif;
+            list-style-type: none;
+        }
+        .text_col ul li{
+            display: block;
+        }
+        .text_col ul li a {
+	        text-decoration: none;
+	        color: #fff;
+	        line-height: 2.5;
+        }
+        .text_col h2 {
+	        color: #fff;
+	        font-size: 20px;
+            font-family: 'Fira Sans', sans-serif;
+        }  
+        .btn-3{
+            background-color: black; 
+            color: white;  
+            font-family: 'Dosis', sans-serif;   
+            border: none;
+            padding: 10px 15px 10px;
+        } 
+        .btn-3:hover{
+            border: 1px solid white;
+            border-radius: 20px;
+            padding: 10px 15px 10px;
+        }  
+    </style>
+</head>
+<body style="background-color: rgb(0, 0, 0);">
+    <nav class="navbar navbar-expand-lg bg-black ps-2 sticky-top">
+        <div class="container">
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
+                <span class="navbar-toggler-icon bg-light"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbar">
+                <ul class="navbar-nav nav-pills nav mt-3">
+                    <li class="nav-item mt-3 me-3"><a class="nav-link text-white " href="homepage_pbl.html">Home</a></li>
+                    <li class="nav-item mt-3 me-3">
+                        <a class="nav-link  text-white" href="love.html">Love Compatibility</a>
+                    </li>
+                    <li class="nav-item dropdown mt-3 me-3">
+                        <a class="nav-link text-white" data-bs-toggle="dropdown" href="zodiacsigns_pbl.html">Zodiac Signs</a>
+                        <ul class="dropdown-menu">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <li class=" dropdown-item"><a class="nav-link" href="zodiacsigns_pbl.html#1st">Aries (March 21-April 19)</a></li>
+                                    <li class=" dropdown-item"><a class="nav-link" href="zodiacsigns_pbl.html#1st">Taurus (April 20-May 20)</a></li>
+                                    <li class=" dropdown-item"><a class="nav-link" href="zodiacsigns_pbl.html#1st">Gemini (May 21-June 20)</a></li>
+                                    <li class=" dropdown-item"><a class="nav-link" href="zodiacsigns_pbl.html#1st">Cancer (June 21-July 22)</a></li>
+                                    <li class=" dropdown-item"><a class="nav-link" href="zodiacsigns_pbl.html#1st">Leo (July 23-August 22)</a></li>
+                                    <li class=" dropdown-item"><a class="nav-link" href="zodiacsigns_pbl.html#1st">Virgo (August 23-September 22)</a></li>
+                                </div>
+                                <div class="col-md-6">
+                                    <li class=" dropdown-item"><a class="nav-link" href="zodiacsigns_pbl.html#1st">Libra (September 23-October 22)</a></li>
+                                    <li class=" dropdown-item"><a class="nav-link" href="zodiacsigns_pbl.html#1st">Scorpio (October 23-November 21)</a></li>
+                                    <li class=" dropdown-item"><a class="nav-link" href="zodiacsigns_pbl.html#1st">Sagittarius (November 22-December 21)</a></li>
+                                    <li class="dropdown-item"><a class="nav-link" href="zodiacsigns_pbl.html#1st">Capricorn (December 22-January 19)</a></li>
+                                    <li class=" dropdown-item"><a class="nav-link" href="zodiacsigns_pbl.html#1st">Aquarius(January 20-Febuary 18)</a></li>
+                                    <li class="dropdown-item"><a class="nav-link" href="zodiacsigns_pbl.html#1st">Pisces(Febuary 19-March 20)</a></li>
+                                </div>
+                            </div>
+                            
+                            
+                               
+                        </ul>
+                    </li> 
+                    <li class="nav-brand"><a class="navbar-brand" href="#"><img src="image/DIONE.png" height="85px" width="100px"></a></li>
+                    <li class="nav-item mt-3 me-3"><a class="nav-link text-white" href="birthchart_pbl.html">Birth Chart</a></li>
+                    <li class="nav-item mt-3 me-3"><a class="nav-link text-white" href="aboutus.html">About Us</a></li>
+                    <li class="nav-item mt-3 me-3"><a class="nav-link text-white" href="premium.html" style="background-color: rgb(96, 46, 143); font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; padding: 12px;">Join Premium</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="header text-white bg-image" style="background-image: linear-gradient(rgba(15, 14, 15, 0.65), rgba(0, 0, 0, 0.534)),url(image/homebg.jpg);">
+        <div class="row">
+            <div class="col-md-6">
+                <h1 style="color: rgb(186, 13, 192); font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">WELCOME TO DIONE!!</h1>
+                <p style="font-size: 21px;">Learn about astrology, zodiac signs, elements, houses, planets and more! Your world becomes clear once you understand how the universe influences it.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-3" >
+        <div class="body ms-3" >
+            <div class="row mt-5">
+                <div class="col-md-6 offset-md-3 astrology mt-5" data-aos="fade-up" >
+                    <h4 class="text-center">What Is Astrology?</h4>
+                    <p class="mb-5">Astrology is the art of studying the relative positions of the Sun, Moon, planets, and constellations to discern information about human affairs and relations as well as terrestrial events .Devotees believe that an understanding of the influence of the planets and stars on earthly affairs allows them to both predict and affect the destinies of individuals, groups, and nations.</p>
+                </div>
+            </div>
+            <div class="scoll">
+                <div class="row mt-5">
+                    <div class="col-md-6 planets" data-aos="fade-right" >
+                        <h4 class="text-center">What are the planets in astrology?</h4>
+                        <p>In ancient times, humanity looked up to the stars and noticed that there were patterns that repeated themselves. They studied them and realized that certain movements of the planets created effects on Earth. They recorded specific details of how sun rising and setting times, planet alignment and moon phase waxing and waning which we also call Vedic Astrology (Hindu astrology).
+                        </p>
+                        <a class="btn mb-5" type="button" href="#first" target="_self">Read more</a>
+                    </div>
+                </div>
+                <div class="offset-md-6 col-md-6 houses" data-aos="fade-left">
+                    <h4 class="text-center">What are the houses in astrology?</h4>
+                    <p>In astrology, houses are a fundamental component of individuals' birth charts that represent different areas of their life. The houses show where in the sky each luminary, the Sun and the Moon and the planets appeared when you were born, wherever on Earth you were born. </p>
+                    <a class="btn mb-5" type="button" href="#second" target="_self">Read more</a>
+                </div>
+            </div>  
+        </div>
+        <div class="body-2 mt-5">
+            <h3 class="text-center mb-4">Zodiac Signs and Their Characteristics</h3>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3  row-cols-lg-4">
+                <div class="col d-flex mb-3">
+                    <div class="zodiac">
+                        <a href="zodiacsigns_pbl.html#1st">
+                            <img src="image/aries__1_-removebg-preview.png">
+                            <p class="text-center" >Aries (March 21-April 13)</p>
+                        </a>
+                        
+                    </div>
+                </div>
+                <div class="col d-flex mb-3">
+                    <div class="zodiac">
+                        <a href="zodiacsigns_pbl.html#1st">
+                            <img src="image/taurus__1_-removebg-preview.png">
+                            <p class="text-center">Taurus (April 20-May 20)</p>
+                        </a>
+                        
+                    </div>
+                </div>
+                <div class="col d-flex mb-3">
+                    <div class="zodiac">
+                        <a href="zodiacsigns_pbl.html#1st">
+                            <img src="image/gemini__1_-removebg-preview.png" style="height: 220px;">
+                            <p class="text-center">Gemini (May 21-June 20)</p>
+                        </a>
+                    </div>
+                        
+                </div>
+                <div class="col d-flex mb-3">
+                    <div class="zodiac">
+                        <a href="zodiacsigns_pbl.html#1st">
+                            <img src="image/cancer__1_-removebg-preview.png">
+                            <p class="text-center" >Cancer (June 21-July 22)</p>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                <div class="col d-flex mb-3">
+                    <div class="zodiac">
+                        <a href="zodiacsigns_pbl.html#1st">
+                            <img src="image/leo__1_-removebg-preview.png">
+                            <p class="text-center">Leo (July 23-August 22)</p>
+                        </a>
+                        
+                    </div>
+                </div>
+                <div class="col d-flex mb-3">
+                    <div class="zodiac">
+                        <a href="zodiacsigns_pbl.html#1st">
+                            <img src="image/virgo__1_-removebg-preview.png">
+                            <p class="text-center">Virgo (August 23-September 22)</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col d-flex mb-3">
+                    <div class="zodiac">
+                        <a href="zodiacsigns_pbl.html#1st">
+                            <img src="image/libra__1_-removebg-preview.png">
+                            <p class="text-center">Libra (September 23-October 22)</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col d-flex mb-3">
+                    <div class="zodiac">
+                        <a href="zodiacsigns_pbl.html#1st">
+                            <img src="image/scorpio-removebg-preview (2).png">
+                            <p class="text-center">Scorpio (October 23-November 21)</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col d-flex mb-3">
+                    <div class="zodiac">
+                        <a href="zodiacsigns_pbl.html#1st">
+                            <img src="image/sagi__1_-removebg-preview.png">
+                            <p class="text-center">Sagittarius(November 22-December 21)</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col d-flex mb-3">
+                    <div class="zodiac">
+                        <a href="zodiacsigns_pbl.html#1st">
+                            <img src="image/cap-removebg-preview.png">
+                            <p class="text-center">Capricorn(December 22-January 19)</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col d-flex mb-3">
+                    <div class="zodiac">
+                        <a href="zodiacsigns_pbl.html#1st">
+                            <img src="image/aqua.png">
+                            <p class="text-center">Aquarius (January 20-Febuary 18)</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col d-flex mb-3">
+                    <div class="zodiac">
+                        <a href="zodiacsigns_pbl.html#1st">
+                            <img src="image/pisces__1_-removebg-preview.png">
+                            <p class="text-center">Pisces(Febuary 19-March 20)</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="body-3 mt-5 text-center">
+            <h3 class="mt-3">Birth Chart</h3>
+            <div class="offset-md-3 col-md-6">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, itaque quidem ipsam repellat debitis tenetur iusto pariatur molestias illum neque nihil voluptate culpa est? Voluptatibus incidunt nam sunt animi delectus!</p>
+            </div>
+            <form class="text-white">
+                <span class="me-2">I was born in</span>
+                <input type="text" placeholder="city" name="city" class="text-center mt-2"><br>
+                <span>on</span>
+                <input type="text" placeholder="dd/mm/yy" name="date" class="text-center mt-1"><span>at</span>
+                <input type="text" placeholder="time" name="time" class="text-center">&nbsp. <br>
+                <span>My email is</span>
+                <input type="text" placeholder="example@gmail.com" name="email" class="text-center mt-1">&nbsp.
+            </form>
+            <button type="button" class="btn-2 my-4"><a href="premium.html">Get Your Birth Chart</a></button>
+        </div>
+            <div id="first" class="mt-5">
+                <h4 class="text-center">9 Planets in Astrology</h4>
+                <p class="text-center mt-3 ms-5 me-5">The readings reduce human experiences into nine manageable archetypes, represented by the nine traditional planets.</p>
+                <div class="carousel slide mt-4" data-bs-ride="carousel" id="carousel_id">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="1900">
+                            <img src="image/the sun.png">
+                            <img src="image/moon.png">
+                            <img src="image/mercury.final.png">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="1900">
+                            <img src="image/veve.png">
+                            <img src="image/the sun.png">
+                            <img src="image/moon.png">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="1900">
+                            <img src="image/mars.png">
+                            <img src="image/veve.png">
+                            <img src="image/the sun.png">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="1900">
+                            <img src="image/jupiter.png">
+                            <img src="image/mars.png">
+                            <img src="image/veve.png">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="1900">
+                            <img src="image/saturn1.png">
+                            <img src="image/jupiter.png">
+                            <img src="image/mars.png">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="1900">
+                            <img src="image/uranus.png">
+                            <img src="image/saturn1.png">
+                            <img src="image/jupiter.png">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="1900">
+                            <img src="image/neptune.png">
+                            <img src="image/uranus.png">
+                            <img src="image/saturn1.png">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="1900">
+                            <img src="image/pluto.png">
+                            <img src="image/neptune.png">
+                            <img src="image/uranus.png">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="1900">
+                            <img src="image/mercury.final.png">
+                            <img src="image/pluto.png">
+                            <img src="image/neptune.png">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="1900">
+                            <img src="image/moon.png">
+                            <img src="image/mercury.final.png">
+                            <img src="image/pluto.png">
+                        </div>
+                        
+                        
+                        <a class="carousel-control-prev" href="#carousel_id" data-bs-slide="prev">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-left" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                                <path fill-rule="evenodd" d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                            </svg>
+                        </a>
+                        <a class="carousel-control-next" href="#carousel_id" data-bs-slide="next"> 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+                                <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        
+            <div id="second" class="mt-5">
+                <h4 class="text-center">12 Houses in Astrology</h4>
+                <p class="text-center mt-3">There are 12 houses in Astrology and each associated with a specific zodiac sign and planetary ruler.</p>
+                <div class="carousel slide mt-4" data-bs-ride="carousel" id="carousel_id2">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active img2" data-bs-interval="1900">
+                            <img src="images/1st_house-removebg-preview.png">
+                            <img src="images/2nd_house-removebg-preview.png">
+                            <img src="images/3rd_house-removebg-preview.png">
+                            <img src="images/4th_house-removebg-preview.png">
+                        </div>
+                        <div class="carousel-item img2" data-bs-interval="1900">
+                            <img src="images/2nd_house-removebg-preview.png">
+                            <img src="images/3rd_house-removebg-preview.png">
+                            <img src="images/4th_house-removebg-preview.png">
+                            <img src="images/5th_house-removebg-preview.png">
+                        </div>
+                        <div class="carousel-item img2" data-bs-interval="1900">
+                            <img src="images/3rd_house-removebg-preview.png">
+                            <img src="images/4th_house-removebg-preview.png">
+                            <img src="images/5th_house-removebg-preview.png">
+                            <img src="images/6th_house-removebg-preview.png">
+                        </div>
+                        <div class="carousel-item img2" data-bs-interval="1900">
+                            <img src="images/4th_house-removebg-preview.png">
+                            <img src="images/5th_house-removebg-preview.png">
+                            <img src="images/6th_house-removebg-preview.png">
+                            <img src="images/7th house.png">
+                        </div>
+                        <div class="carousel-item img2" data-bs-interval="1900">
+                            <img src="images/5th_house-removebg-preview.png">
+                            <img src="images/6th_house-removebg-preview.png">
+                            <img src="images/7th house.png">
+                            <img src="images/8th_house-removebg-preview.png">
+                        </div>
+                        <div class="carousel-item img2" data-bs-interval="1900">
+                            <img src="images/6th_house-removebg-preview.png">
+                            <img src="images/7th house.png">
+                            <img src="images/8th_house-removebg-preview.png">
+                            <img src="images/9th_house-removebg-preview.png">
+                        </div>
+                        <div class="carousel-item img2" data-bs-interval="1900">
+                            <img src="images/7th house.png">
+                            <img src="images/8th_house-removebg-preview.png">
+                            <img src="images/9th_house-removebg-preview.png">
+                            <img src="images/10th_house-removebg-preview.png">
+                        </div>
+                        <div class="carousel-item img2" data-bs-interval="1900">
+                            <img src="images/8th_house-removebg-preview.png">
+                            <img src="images/9th_house-removebg-preview.png">
+                            <img src="images/10th_house-removebg-preview.png">
+                            <img src="images/11th_house-removebg-preview.png">
+                        </div>
+                        <div class="carousel-item img2" data-bs-interval="1900">
+                            <img src="images/9th_house-removebg-preview.png">
+                            <img src="images/10th_house-removebg-preview.png">
+                            <img src="images/11th_house-removebg-preview.png">
+                            <img src="images/12th_house-removebg-preview.png">
+                        </div>
+                        <div class="carousel-item img2" data-bs-interval="1900">
+                            <img src="images/10th_house-removebg-preview.png">
+                            <img src="images/11th_house-removebg-preview.png">
+                            <img src="images/12th_house-removebg-preview.png">
+                            <img src="images/1st_house-removebg-preview.png">
+                        </div>
+                        <div class="carousel-item img2" data-bs-interval="1900">
+                            <img src="images/11th_house-removebg-preview.png">
+                            <img src="images/12th_house-removebg-preview.png">
+                            <img src="images/1st_house-removebg-preview.png">
+                            <img src="images/2nd_house-removebg-preview.png">
+                        </div>
+                        <div class="carousel-item img2" data-bs-interval="1900">
+                            <img src="images/12th_house-removebg-preview.png">
+                            <img src="images/1st_house-removebg-preview.png">
+                            <img src="images/2nd_house-removebg-preview.png">
+                            <img src="images/3rd_house-removebg-preview.png">
+                        </div>
+                                                
+                        
+                        <a class="carousel-control-prev" href="#carousel_id2" data-bs-slide="prev">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-left" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                                <path fill-rule="evenodd" d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                            </svg>
+                        </a>
+                        <a class="carousel-control-next" href="#carousel_id2" data-bs-slide="next"> 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+                                <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="d-flex justify-content-center link-2 my-4">
+            <ul>
+                <li><a href="zodiacsigns_pbl.html">Zodiac Signs</a></li>
+                <li><a href="love.html">Love Compatibility</a></li>
+                <li><a href="birthchart_pbl.html">Birth Chart</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="premium.html">Premium</a></li>
+            </ul>
+        </div>
+        
+    </div>
+    <hr style="color:  rgb(175, 175, 175);">
+    <div class="d-flex justify-content-center">
+        <ul class="link">
+            <li><a href="#">Aries</a></li>
+            <li><a href="#">Taurus</a></li>
+            <li><a href="#">Gemini</a></li>
+            <li><a href="#">Cancer</a></li>
+            <li><a href="#">Leo</a></li>
+            <li><a href="#">Virgo</a></li>
+            <li><a href="#">Libra</a></li>
+            <li><a href="#">Scorpio</a></li>
+            <li><a href="#">Sagittarius</a></li>
+            <li><a href="#">Capricorn</a></li>
+            <li><a href="#">Aquarius</a></li>
+            <li><a href="#">Pisces</a></li>
+        </ul>
+    </div>
+    <hr style="color:  rgb(175, 175, 175);">
+    <footer>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="text_col">
+                        <h2><b>About Page</b></h2>
+                            <p>We provide our customers individualized and accurate astrology readings to assist them learn more about themselves, their relationships, and their life path. </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="text_col">
+                        <h2></b>Contact Info</b></h2>
+                    
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-location-dot"></i> &nbsp;Yangon, Myanmar</a></li>
+                        <li><a href="#"><i class="fa-solid fa-phone"></i> &nbsp;+95 123456778</a></li>
+                        <li><a href="#"><i class="fa-solid fa-envelope"></i> &nbsp;name@gmail.com</a></li>
+                    </ul>
+                    
+                    </div>                    
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="text_col">
+                        <h2><b>Quick Links</b></h2>
+                    <ul>
+                        <li><a href="homepage_pbl.html">Home</a></li>
+                        <li><a href="love.html">Love Compatibility</a></li>
+                        <li><a href="zodiacsigns_pbl.html">Zodiac Signs</a></li>
+                        <li><a href="birthchart_pbl.html">Birth Chart</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                    </ul>
+                    </div>                    
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="text_col">
+                        <h2><b>Subscribe!</b></h2>
+                        <small>Subscribe to get updates about our services and products</small>
+                        <div class="form-floating my-3">
+                            <input type="text" class="form-control form-control-sm rounded-3" placeholder="email" style="border: 1px solid white;background-color: white; ">
+                            <label for="floatingInput">example@gmail.com</label>
+                        </div>
+                        <button type="submit" class="btn-3 btn-outline-white btn-block"         
+                        >Subscribe &nbsp;<i class="fa-solid fa-arrow-right fa-beat"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <hr class=" text-light">
+
+        <div class="container p-3 pt-0">
+            <div class="row_2 d-flex align-items-center">
+                <div class="col-md-7 col-lg-8 text-center text-md-start">
+                    <div class="p-3 text-light">
+                        2023 Copyright <span>&copy;</span>All rights reserved.
+                    </div>
+                </div>
+                <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+                    <a class="btn btn-outline-light btn-floating m-1" role="button" style=" border-radius: 20px;
+                    ">
+                        <i class="fa-brands fa-pinterest fa-fade"></i>
+                    </a>
+                    <a class="btn btn-outline-light btn-floating m-1" role="button" style=" border-radius: 20px;
+                    ">
+                        <i class="fa-brands fa-facebook fa-fade"></i>
+                    </a>
+                    <a class="btn btn-outline-light btn-floating m-1" role="button" style=" border-radius: 20px;
+                    ">
+                        <i class="fa-brands fa-instagram fa-fade"></i>
+                    </a>
+                    <a class="btn btn-outline-light btn-floating m-1 " role="button" style=" border-radius: 20px;
+                    ">
+                        <i class="fa-brands fa-twitter fa-fade"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+
+    </footer>  
+    
+    <script>
+        AOS.init({ 
+            duration: 3000,
+            
+        });
+    </script>
+
+    
+
+</body>
+</html>
