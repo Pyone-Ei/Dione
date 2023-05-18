@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image" href="images/Screenshot 2023-04-18 at 21.56.07.png">
+    <title>Zodiac Signs</title>
+    <style>
+        *{
+            font-family: sans-serif;
+        }
+        .dropdown:hover .dropdown-menu{
+            display: block;
+        }
+        .dropdown-menu{
+            background-color: rgb(240, 228, 240);
+            width: 490px;
+        }
+        .dropdown-item a{
+            font-size: 10px;
+            font-weight: bold;
+            
+        }
+        .dropdown-item:hover{
+            color: rgb(85, 19, 129);
+            text-decoration: 2px underline;
+        }
+        .header{
+            width: 100%;
+            padding-top:100px ;
+            height: 450px;
+        }
+        .bg-image{
+            overflow: hidden;
+        }
+        h2,h3,h4,h5,h6,p{
+            color: white;
+        }
+        .zodiac img{
+            width: 150px;
+        }
+        .body .col a{
+            text-decoration: none;
+        }
+        .zodiac{
+            border: none;
+            border-radius: 8px;
+            padding: 16px;
+            background-color: rgba(36, 17, 53, 0.514);
+            margin-top: 35px;
+            text-align: center;
+        }
+        .signs{
+            background-color: rgba(70, 7, 78, 0.459);
+        }
+        .tab-pane img{
+            width: 230px;
+        }
+        ul.link li a{
+            text-decoration: none;
+            padding:0  23px 0 10px;
+            color: white;
+        }
+        .zzz ul{
+            margin: 0 60px 0 50px;
+        }
+        .zzz ul li{
+            display: inline-block; 
+            margin-top:7px ;
+        }
+        .tab-pane p{
+           font-size: 15px;
+           line-height: 22px;
+        }
+        .qanda .accordion-item{
+           border: none;
+           
+        }
+        .qanda .accordion-header{
+            border-bottom: 1px solid;
+        }
+        footer{
+	        
+            padding-top: 20px;
+        }
+        .text_col small {
+	        color: #fff;
+	        line-height: 1.9;
+        }
+        .text_col h3 {
+	        font-size: 16px;
+	        color: #fff;
+        }
+        .text_col p {
+            color: white;
+            line-height: 2.0;
+            font-family: 'Abel', sans-serif;
+        }
+        .text_col ul {
+	        padding: 0;
+            font-family: 'Abel', sans-serif;
+            list-style-type: none;
+        }
+        .text_col ul li a {
+	        text-decoration: none;
+	        color: #fff;
+	        line-height: 2.5;
+        }
+        .text_col h2 {
+	        color: #fff;
+	        font-size: 20px;
+            font-family: 'Fira Sans', sans-serif;
+        }     
+    </style>
+</head>
+<body style="background-color: black;">
+    <nav class="navbar navbar-expand-lg bg-black ps-2 sticky-top">
+        <div class="container">
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
+                <span class="navbar-toggler-icon bg-light"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbar">
+                <ul class="navbar-nav nav-pills nav mt-3">
+                    <li class="nav-item mt-3 me-3"><a class="nav-link text-white " href="index.html">Home</a></li>
+                    <li class="nav-item dropdown mt-3 me-3">
+                        <a class="nav-link text-white" data-bs-toggle="dropdown" href="zodiacsigns_pbl.html">Zodiac Signs</a>
+                        <ul class="dropdown-menu">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <li class=" dropdown-item"><a class="nav-link" href="#1st">Aries (March 21-April 19)</a></li>
+                                    <li class=" dropdown-item"><a class="nav-link" href="#1st">Taurus (April 20-May 20)</a></li>
+                                    <li class=" dropdown-item"><a class="nav-link" href="#1st">Gemini (May 21-June 20)</a></li>
+                                    <li class=" dropdown-item"><a class="nav-link" href="#1st">Cancer (June 21-July 22)</a></li>
+                                    <li class=" dropdown-item"><a class="nav-link" href="#1st">Leo (July 23-August 22)</a></li>
+                                    <li class=" dropdown-item"><a class="nav-link" href="#1st">Virgo (August 23-September 22)</a></li>
+                                </div>
+                                <div class="col-md-6">
+                                    <li class=" dropdown-item"><a class="nav-link" href="#1st">Libra (September 23-October 22)</a></li>
+                                    <li class=" dropdown-item"><a class="nav-link" href="#1st">Scorpio (October 23-November 21)</a></li>
+                                    <li class=" dropdown-item"><a class="nav-link" href="#1st">Sagittarius (November 22-December 21)</a></li>
+                                    <li class="dropdown-item"><a class="nav-link" href="#1st">Capricorn (December 22-January 19)</a></li>
+                                    <li class=" dropdown-item"><a class="nav-link" href="#1st">Aquarius(January 20-Febuary 18)</a></li>
+                                    <li class="dropdown-item"><a class="nav-link" href="#1st">Pisces(Febuary 19-March 20)</a></li>
+                                </div>
+                            </div>   
+                        </ul>
+                    </li> 
+                    <li class="nav-item mt-3 me-3">
+                        <a class="nav-link  text-white" href="love.html">Love Compatibility</a>
+                    </li>
+                    <li class="nav-brand"><a class="navbar-brand" href="#"><img src="image/DIONE.png" height="85px" width="100px"></a></li>
+                    <li class="nav-item mt-3 me-3"><a class="nav-link text-white" href="birthchart_pbl.html">Birth Chart</a></li>
+                    <li class="nav-item mt-3 me-3"><a class="nav-link text-white" href="abtus.html">About Us</a></li>
+                    <li class="nav-item mt-3 me-3"><a class="nav-link text-white" href="premium.html" style="background-color: rgb(96, 46, 143); font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; padding: 12px;">Join Premium</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="header text-center bg-image" style="background-image: linear-gradient(rgba(15, 14, 15, 0.65), rgba(0, 0, 0, 0.534)),url(image/zzz.jpg);">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h3>What is the Zodiac?</h3>
+                <p>The zodiac, the 12 signs listed in a horoscope, is closely tied to how the Earth moves through the sky. We derive these signs from the constellations that mark out the path that the sun appears to take through the year. A sign of the zodiac refers to one of 12 specific constellations of the zodiac that the sun passes through. A person's particular sign of the zodiac is the one that the sun was in when they were born. It is a belief in astrology that a person's personality can be predicted using their sign of the zodiac. The zodiac is divided into the following twelve signs: Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpio, Sagittarius, Capricorn, Aquarius, and Pisces. </p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="body">
+            <h4 class="text-center mt-5">4 Elements in Astrology</h4>
+            <p class="text-center mx-5">The twelve zodiac signs are grouped into four elements—fire, earth, air and water. Each of these elementary groups has distinct traits. Each one plays a critical role in maintaining our well-being. There are 3 zodiac signs in each element.
+            </p>
+            <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3  row-cols-lg-4">
+                <div class="col d-flex mb-3">
+                    <div class="zodiac" style="background-color: rgba(80, 2, 2, 0.425);">
+                        <img src="image/fire_signs-removebg-preview.png" height="130px">
+                        <h5 class="text-center" >FIRE</h5>
+                        <p>Direction - South</p>
+                        <p>Aries, Leo, Sagittarius</p>
+                        <p>Strengths - Courageous, Passionate, Strong<br>Weaknesses - Short-tempered, Jealous, Obsessive</p>
+                    </div>
+                </div>
+                <div class="col d-flex mb-3">
+                    <div class="zodiac" style="background-color: rgba(2, 2, 73, 0.356);">
+                        <img src="image/water_signs-removebg-preview.png" >
+                        <h5 class="text-center">WATER</h5>
+                        <p>Direction - West</p>
+                        <p>Pisces, Cancer, Scorpio</p>
+                        <p>Strengths - Healing, Nurturing, Trusting<br>Weaknesses - Indifferent, Trust Issues, Depression Prone</p>                    
+                    </div>
+                </div>
+                <div class="col d-flex mb-3">
+                    <div class="zodiac" style="background-color: rgba(68, 68, 68, 0.384);">
+                        <img src="image/air_signs-removebg-preview.png" height="130px">
+                        <h5 class="text-center">AIR</h5>
+                        <p>Direction - West</p>
+                        <p>Signs ruled - Aquarius, Gemini, Libra</p>
+                        <p>Strengths - Fun, Out-going, Communicative<br>Weaknesses - Self-centered, Two-faced, Dishonest</p>
+                    </div>
+                        
+                </div>
+                <div class="col d-flex mb-3">
+                    <div class="zodiac" style="background-color: rgba(1, 48, 1, 0.452);">
+                        <img src="image/earth_signs-removebg-preview.png" height="130px">
+                        <h5 class="text-center" >EARTH</h5>
+                        <p>Direction - West</p>
+                        <p>Signs ruled - Taurus, Virgo, Capricorn</p>
+                        <p>Strengths - Logical, Hard-working, Honest<br>Weaknesses - Stubborn, Lazy, Materialistic</p>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+    <div class="container-fluid mt-5">
+        <h4 class="text-center">12 Zodiac Signs in Astrology</h4>
+        <div class="row mx-5 mt-5">
+            <div class="col-md-3">
+                <ul class="nav nav-pills flex-column signs" style="border-radius:10px;" >
+                    <li class="nav-item">
+                        <a class="nav-link text-white active" href="#1st" data-bs-toggle="tab">Aries (March 21-April 13)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#2nd" data-bs-toggle="tab" style="border-radius:0;">Taurus (April 20-May 20)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#3rd" data-bs-toggle="tab" style="border-radius:0;">Gemini (May 21-June 20)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#4th" data-bs-toggle="tab" style="border-radius:0;">Cancer (June 21-July 22)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#5th" data-bs-toggle="tab" style="border-radius:0;">Leo (July 23-August 22)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#6th" data-bs-toggle="tab" style="border-radius:0;">Virgo (August 23-September 22)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#7th" data-bs-toggle="tab" style="border-radius:0;">Libra (September 23-October 22)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#8th" data-bs-toggle="tab" style="border-radius:0;">Scorpio (October 23-November 21)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#9th" data-bs-toggle="tab" style="border-radius:0;">Sagittarius (Nov 22-Dec 21)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#10th" data-bs-toggle="tab" style="border-radius:0;">Capricorn (Dec 22-January 19)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#11th" data-bs-toggle="tab" style="border-radius:0;">Aquarius (January 20-Febuary 18)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#12th"data-bs-toggle="tab">Pisces (Febuary 19-March 20)</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-9 mt-5">
+                <div class="tab-content">
+                    <div class="tab-pane active" id="1st">
+                        <h5>Aries (March 21 - April 13)</h5>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img src="image/aaaaa.PNG">
+                            </div>
+                            <div class="col-md-5">
+                                <p>Element : Fire<br>Color : Red <br>Quality : Cardinal<br> Day : Tuesday<br>Ruler : Mars<br>
+                                    Greatest Compatibility : Libra, and fellow fire signs<br>Lucky Numbers : 1, 8, 17</p>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="accordion" id="parent">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header ">
+                                            <button type="button" class="accordion-button bg-black text-white" data-bs-toggle="collapse" data-bs-target="#myaccordion1"><p>Which zodiac signs are the most compatible with Aries?</p></button>
+                                        </h2>
+                                        <div class="collapse accordion-collapse " id="myaccordion1" data-bs-parent="#parent">
+                                            <div class="accordion-body bg-black">
+                                                <p>The most compatible zodiacs for Aries are Leo, Sagittarius, and Libra. </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header ">
+                                            <button type="button" class="accordion-button bg-black text-white" data-bs-toggle="collapse" data-bs-target="#myaccordion2"><p>Which planet does rule Aries?</p></button>
+                                        </h2>
+                                        <div class="collapse accordion-collapse " id="myaccordion2" data-bs-parent="#parent">
+                                            <div class="accordion-body bg-black">
+                                                <p>Aries is ruled by the planet Mars.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header ">
+                                            <button type="button" class="accordion-button text-white bg-black" data-bs-toggle="collapse" data-bs-target="#myaccordion3"><p>What modality is Aries?</p></button>
+                                        </h2>
+                                        <div class="collapse accordion-collapse " id="myaccordion3" data-bs-parent="#parent">
+                                            <div class="accordion-body bg-black">
+                                               <p>Aries is a cardinal sign.</p> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <p>As the first sign in the zodiac, Aries' presence always marks the beginning of something energetic and turbulent. They are continuously seeking dynamic experiences, speed, and competition, always striving to be first in everything from work to social gatherings. Though aries can be hotheaded, nobody can deny the quick-thinking and intense call-to-action innate in any Aries.</p>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="tab-pane" id="2nd">
+                        <h5>Taurus (April 20 - May 20)</h5>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img src="image/taurus2.png">     
+                            </div>
+                            <div class="col-md-5">
+                                <p>Element : Earth<br>Color : Green, Pink <br>Quality : Fixed<br> Day : Friday, Monday<br>Ruler : Venus<br>
+                                    Greatest Compatibility : Scorpio, Cancer and fellow earth signs<br>Lucky Numbers :  2, 6, 9, 12, 24</p>  
+                            </div>
+                            <div class="col-md-4">
+                                <div class="accordion" id="parent">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header ">
+                                            <button type="button" class="accordion-button bg-black text-white" data-bs-toggle="collapse" data-bs-target="#myaccordion1"><p>Which zodiac signs are the most compatible with Taurus?</p></button>
+                                        </h2>
+                                        <div class="collapse accordion-collapse " id="myaccordion1" data-bs-parent="#parent">
+                                            <div class="accordion-body bg-black">
+                                                <p>Typically, the zodiac signs that will be most compatible with Taurus are fellow earth signs Virgo and Capricorn and as well as water signs. </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header ">
+                                            <button type="button" class="accordion-button bg-black text-white" data-bs-toggle="collapse" data-bs-target="#myaccordion2"><p>Is Taurus masculine or feminine sign?</p></button>
+                                        </h2>
+                                        <div class="collapse accordion-collapse " id="myaccordion2" data-bs-parent="#parent">
+                                            <div class="accordion-body bg-black">
+                                                <p>Taurus is a feminine sign.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header ">
+                                            <button type="button" class="accordion-button bg-black text-white" data-bs-toggle="collapse" data-bs-target="#myaccordion3"><p>Which element is Taurus in?</p></button>
+                                        </h2>
+                                        <div class="collapse accordion-collapse " id="myaccordion3" data-bs-parent="#parent">
+                                            <div class="accordion-body bg-black">
+                                                <p>Taurus is an earth sign ruled by Venus.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <p>Taurus is a practical and well-grounded zodiac sign that values the fruits of their labor. They have a strong desire to be surrounded by love and beauty. They are also known for being stable and conservative, making them one of the most dependable signs of the zodiac.But the phrase, “stubborn as a bull,” fits this zodiac sign beautifully, as it is represented by the Bull. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="3rd">
+                        <h5>Gemini (May 21 - June 20)</h5>
+                        <div class="row">
+                            <div class="col-md-3 ">
+                                <img src="image/gemini2.png">
+                            </div>
+                            <div class="col-md-5 pt-4">
+                                <p>Element : Air<br>Color : Light-Green, Yellow <br>Quality : Mutable<br> Day : Wednesday<br>Ruler : Mercury<br>
+                                    Greatest Compatibility : Sagittarius and other fellow air signs<br>Lucky Numbers :  5, 7, 14, 23</p>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="accordion" id="parent">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header ">
+                                            <button type="button" class="accordion-button bg-black text-white" data-bs-toggle="collapse" data-bs-target="#myaccordion1"><p>What dates are Gemini?</p></button>
+                                        </h2>
+                                        <div class="collapse accordion-collapse " id="myaccordion1" data-bs-parent="#parent">
+                                            <div class="accordion-body bg-black">
+                                                <p>Gemini is the third sign of the zodiac, considered as governing the period from about May 21 to about June 21. </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header ">
+                                            <button type="button" class="accordion-button bg-black text-white" data-bs-toggle="collapse" data-bs-target="#myaccordion2"><p>What does Gemini like?</p></button>
+                                        </h2>
+                                        <div class="collapse accordion-collapse " id="myaccordion2" data-bs-parent="#parent">
+                                            <div class="accordion-body bg-black">
+                                                <p>Gemini likes music, books, magazines, chats with nearly anyone, short trips around the town.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header ">
+                                            <button type="button" class="accordion-button bg-black text-white" data-bs-toggle="collapse" data-bs-target="#myaccordion3"><p>Who is Gemini's soulmate?</p></button>
+                                        </h2>
+                                        <div class="collapse accordion-collapse " id="myaccordion3" data-bs-parent="#parent">
+                                            <div class="accordion-body bg-black">
+                                                <p>Gemini friendships and romantic relationships are fellow air signs Aquarius and Libra, as they'll have an innate understanding of Gemini's mental nature.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-8">
+                                <p>Gemini is a zodiac sign that represents two different personalities in one, making them expressive and quick-witted. They are sociable, communicative, and always ready for fun, but can suddenly become serious, thoughtful, and restless. As it is ruled by Mercury, Gemini is typically concerned with learning as much as possible from its peers.Their curiosity about the world knows no bounds, and they often feel like there is not enough time to experience everything they want to see.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="4th">
+                        <h5>Cancer (June 21 - July 22)</h5>
+                        <div class="row">
+                            <div class="col-md-3 ">
+                                <img src="image/cancer2.png">
+                            </div>
+                            <div class="col-md-5 pt-4">
+                                <p>Element : Water<br>Color : White <br>Quality : Cardinal<br> Day : Monday, Thursday<br>Ruler : Moon<br>
+                                    Greatest Compatibility : Capricorn, Taurus and other fellow water signs<br>Lucky Numbers :  2, 3, 15, 20</p>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="accordion" id="parent">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header ">
+                                            <button type="button" class="accordion-button bg-black text-white" data-bs-toggle="collapse" data-bs-target="#myaccordion1"><p>Which zodiac signs are the most compatible with Cancer?</p></button>
+                                        </h2>
+                                        <div class="collapse accordion-collapse " id="myaccordion1" data-bs-parent="#parent">
+                                            <div class="accordion-body bg-black">
+                                                <p>The most compatible zodiacs for Cancer are their fellow water signs Scorpio and Pisces. </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header ">
+                                            <button type="button" class="accordion-button bg-black text-white" data-bs-toggle="collapse" data-bs-target="#myaccordion2"><p>Are Cancers so emotional?</p></button>
+                                        </h2>
+                                        <div class="collapse accordion-collapse " id="myaccordion2" data-bs-parent="#parent">
+                                            <div class="accordion-body bg-black">
+                                                <p>The winner of the most emotional zodiac sign is Cancer, no doubt about it. They're the ones most likely to cry at a movie or be moved by a heartfelt story.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header ">
+                                            <button type="button" class="accordion-button bg-black text-white" data-bs-toggle="collapse" data-bs-target="#myaccordion3"><p>What modality is Cancer?</p></button>
+                                        </h2>
+                                        <div class="collapse accordion-collapse " id="myaccordion3" data-bs-parent="#parent">
+                                            <div class="accordion-body bg-black">
+                                               <p>Cancer is a cardinal sign.</p> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-8">
+                                <p>Cancer is a zodiac sign that is deeply intuitive and sentimental, making them one of the most challenging signs to get to know. They are highly emotional and sensitive, and prioritize matters related to family and home. Ruled by the moon, Cancer's psychic receptivity is motherly, nurturing, and compassionate.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="5th">
+                        <h5>Leo (July 23 - August 22)</h5>
+                        <div class="row">
+                            <div class="col-md-3 ">
+                                <img src="image/leo2.png">
+                            </div>
+                            <div class="col-md-5 pt-4">
+                                <p>Element :  Fire<br>Color : Gold, Yellow, Orange <br>Quality : Fixed<br> Day : Sunday<br>Ruler : Sun<br>
+                                    Greatest Compatibility : Aquarius, Gemini and other fellow fire signs<br>Lucky Numbers : 1, 3, 10, 19</p>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="accordion" id="parent">
+                                    <div class="accordion-item" >
+                                        <h2 class="accordion-header ">
+                                            <button type="button" class="accordion-button bg-black text-white"  data-bs-toggle="collapse" data-bs-target="#myaccordion1"><p>What are the negative traits of Leo?</p></button>
+                                        </h2>
+                                        <div class="collapse accordion-collapse " id="myaccordion1" data-bs-parent="#parent">
+                                            <div class="accordion-body bg-black">
+                                                <p>They are arrogant, stubborn, self-centered, lazy and over-confident. </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header ">
+                                            <button type="button" class="accordion-button bg-black text-white" data-bs-toggle="collapse" data-bs-target="#myaccordion2"><p>Are Leos introverts or extroverts?</p></button>
+                                        </h2>
+                                        <div class="collapse accordion-collapse " id="myaccordion2" data-bs-parent="#parent">
+                                            <div class="accordion-body bg-black">
+                                                <p>Leo is an extroverted sign due to their love for attention and validation from others. </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header ">
+                                            <button type="button" class="accordion-button bg-black text-white" data-bs-toggle="collapse" data-bs-target="#myaccordion3"><p>Is leo a fire sign?</p></button>
+                                        </h2>
+                                        <div class="collapse accordion-collapse " id="myaccordion3" data-bs-parent="#parent">
+                                            <div class="accordion-body bg-black">
+                                               <p>Leo is a fixed, masculine fire sign, ruled by the Sun.</p> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-8">
+                                <p>People born under the sign of Leo are known for their natural leadership abilities. They possess qualities such as creativity, self confidence, dominance and a strong presence that is hard to resist.Whether it's Leo's immense joy or dramatic flair, no other sign can match the King or Queen of zodiac. This Lion will always have the loudest roar!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="6th">
+                        <h5>Virgo (August 23 - September 22)</h5>
+                        <div class="row">
+                            <div class="col-md-3 ">
+                                <img src="image/virgo2.png">
+                            </div>
+                            <div class="col-md-5 pt-4">
+                                <p>Element :  Earth<br>Color : Grey, Beige, Pale-Yellow <br>Quality : Mutable<br> Day : Wednesday<br>Ruler : Mercury<br>
+                                    Greatest Compatibility : Pisces, Scorpio and other fellow earth signs<br>Lucky Numbers :5, 14, 15, 23, 32</p>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="accordion" id="parent">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header ">
+                                            <button type="button" class="accordion-button bg-black text-white" data-bs-toggle="collapse" data-bs-target="#myaccordion1"><p>What does Virgo hate?</p></button>
+                                        </h2>
+                                        <div class="collapse accordion-collapse " id="myaccordion1" data-bs-parent="#parent">
+                                            <div class="accordion-body bg-black">
+                                                <p>Virgo hates rudeness, asking for help, taking center stage and disrespectful behaviours. </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header ">
+                                            <button type="button" class="accordion-button bg-black text-white" data-bs-toggle="collapse" data-bs-target="#myaccordion2"><p>Which planet does rule Virgo?</p></button>
+                                        </h2>
+                                        <div class="collapse accordion-collapse " id="myaccordion2" data-bs-parent="#parent">
+                                            <div class="accordion-body bg-black">
+                                                <p>Virgo is ruled by the planet Mercury.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header ">
+                                            <button type="button" class="accordion-button bg-black text-white" data-bs-toggle="collapse" data-bs-target="#myaccordion3"><p>What house is Virgo in?</p></button>
+                                        </h2>
+                                        <div class="collapse accordion-collapse " id="myaccordion3" data-bs-parent="#parent">
+                                            <div class="accordion-body bg-black">
+                                               <p>Virgo is an earth sign, associated with the Sixth House of work, health, and daily routines.</p> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-8">
+                                <p>Virgos are known for their meticulous attention to detail and their deep sense of humanity, which makes them one of the most caring signs of the zodiac. Although they can be tender, they may keep their heart closed to the outer world. This sign is often misunderstood not because they lack the ability to express themselves, but because they don't always trust their feelings and tend to prioritize reason over emotions.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="7th">
+                        <h5>Libra (September 23 - October 22)</h5>
+                        <div class="row">
+                            <div class="col-md-3 ">
+                                <img src="image/libra2.png">
+                            </div>
+                            <div class="col-md-5 pt-4">
+                                <p>Element :  Air<br>Color : Pink, Green <br>Quality : Cardinal<br> Day : Friday<br>Ruler : Venus<br>
+                                    Greatest Compatibility : Aries, Sagittarius and other fellow air signs<br>Lucky Numbers : 4, 6, 13, 15, 24</p>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="accordion" id="parent">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header ">
+                                            <button type="button" class="accordion-button bg-black text-white" data-bs-toggle="collapse" data-bs-target="#myaccordion1"><p>Are the dates of Libra between November and December?</p></button>
+                                        </h2>
+                                        <div class="collapse accordion-collapse " id="myaccordion1" data-bs-parent="#parent">
+                                            <div class="accordion-body bg-black">
+                                                <p>Libra is the seventh sign of the zodiac, between September 23 to October 22. </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header ">
+                                            <button type="button" class="accordion-button bg-black text-white" data-bs-toggle="collapse" data-bs-target="#myaccordion2"><p>What are the positive traits of Libra?</p></button>
+                                        </h2>
+                                        <div class="collapse accordion-collapse " id="myaccordion2" data-bs-parent="#parent">
+                                            <div class="accordion-body bg-black">
+                                                <p>Libras are cooperative, diplomatic, gracious, fair-minded, social-butterflies.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header ">
+                                            <button type="button" class="accordion-button bg-black text-white" data-bs-toggle="collapse" data-bs-target="#myaccordion3"><p>Is Libra a masculine or feminine sign?</p></button>
+                                        </h2>
+                                        <div class="collapse accordion-collapse " id="myaccordion3" data-bs-parent="#parent">
+                                            <div class="accordion-body bg-black">
+                                               <p>Libra is a masculine air sign.</p> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-8">
+                                <p>The sign of libra is known for their peaceful and fair nature, and they generally dislike being alone. They are willing to go to great lengths to avoid conflict and maintain peace whenever possible. Partnership is crucial for them, and they seek someone who can reflect their inner selves. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="8th">
+                        <h5>Scorpio (October 23 - November 21)</h5>
+                        <div class="row">
+                            <div class="col-md-3 ">
+                                <img src="image/scorpio2.png">
+                            </div>
+                            <div class="col-md-5 pt-4">
+                                <p>Element :  Water<br>Color : Scarlet, Red, Rust <br>Quality : Fixed<br> Day : Tuesday<br>Ruler : Pluto, Mars<br>
+                                    Greatest Compatibility : Virgo, Capricorn, Taurus and other fellow water signs<br>Lucky Numbers : 8, 11, 18, 22</p>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="accordion" id="parent">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header ">
+                                            <button type="button" class="accordion-button bg-black text-white" data-bs-toggle="collapse" data-bs-target="#myaccordion1"><p>What house is Scorpio in?</p></button>
+                                        </h2>
+                                        <div class="collapse accordion-collapse " id="myaccordion1" data-bs-parent="#parent">
+                                            <div class="accordion-body bg-black">
+                                                <p>Scorpio is a fixed, feminine water sign, associated with the Eighth House of joint resources, intimacy, and transformation. </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header ">
+                                            <button type="button" class="accordion-button bg-black text-white" data-bs-toggle="collapse" data-bs-target="#myaccordion2"><p>What are the strengths of Scorpios?</p></button>
+                                        </h2>
+                                        <div class="collapse accordion-collapse " id="myaccordion2" data-bs-parent="#parent">
+                                            <div class="accordion-body bg-black">
+                                                <p>Scorpios are resourceful, powerful, brave, passionate, loyal and true friends.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header ">
+                                            <button type="button" class="accordion-button bg-black text-white" data-bs-toggle="collapse" data-bs-target="#myaccordion3"><p>What does Scorpio dislike?</p></button>
+                                        </h2>
+                                        <div class="collapse accordion-collapse " id="myaccordion3" data-bs-parent="#parent">
+                                            <div class="accordion-body bg-black">
+                                               <p>Scorpios dislike dishonesty, revealing secrets, superficiality, small talks and disrespectful people.</p> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-8">
+                                <p>Scorpios are known for their passionate and assertive nature with a level of determination and focus that is often unmatched by the other zodiac signs. They are known to delve deeply into research to uncover the truth behind anything they consider to be important. With deep self-awareness, Scorpios uncover ways to confront their deepest, darkest motives and to hide their talents and dark desires.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="9th">
+                        <h5>Sagittarius (November 22 - December 21)</h5>
+                        <div class="row mt-4">
+                            <div class="col-md-8">
+                                <div class="d-flex">
+                                    <img src="image/sagi-removebg-preview.png">
+                                    <p class="pt-3">Element :  Fire<br>Color : Blue <br>Quality : Mutable<br> Day : Thursday<br>Ruler : Jupiter<br>
+                                    Greatest Compatibility : Gemini and other fellow fire signs<br>Lucky Numbers : 3, 7, 9, 12, 21</p>
+                                </div>
+                                
+                                <p>Sagittarius individuals are known for their curiosity and energy, making them natural travelers of the zodiac. Sagittarius tends to be an expressive, jolly sign with a booming presence. As extroverts, they are optimistic, enthusiastic, and always ready for change.</p>
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <div class="accordion pt-3" id="parent">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header ">
+                                            <button type="button" class="accordion-button bg-black text-white" data-bs-toggle="collapse" data-bs-target="#myaccordion1"><p>Is Sagittarius a fire sign?</p></button>
+                                        </h2>
+                                        <div class="collapse accordion-collapse " id="myaccordion1" data-bs-parent="#parent">
+                                            <div class="accordion-body bg-black">
+                                                <p>Sagittarius is a fire sign ruled by Jupiter. </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header ">
+                                            <button type="button" class="accordion-button bg-black text-white" data-bs-toggle="collapse" data-bs-target="#myaccordion2"><p>Are people who are the sign of Sagittarius extroverts?</p></button>
+                                        </h2>
+                                        <div class="collapse accordion-collapse " id="myaccordion2" data-bs-parent="#parent">
+                                            <div class="accordion-body bg-black">
+                                                <p>The 9th zodisc sign, Sagittarius tend to be very extroverted, enthusiastic and out-going.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header ">
+                                            <button type="button" class="accordion-button bg-black text-white" data-bs-toggle="collapse" data-bs-target="#myaccordion3"><p>What modality is Sagittarius?</p></button>
+                                        </h2>
+                                        <div class="collapse accordion-collapse " id="myaccordion3" data-bs-parent="#parent">
+                                            <div class="accordion-body bg-black">
+                                               <p>Aries is a mutable sign.</p> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                    <div class="tab-pane" id="10th">
+                        <h5>Capricorn (December 22 - January 19)</h5>
+                        <div class="row">
+                            <div class="col-md-3 ">
+                                <img src="image/capricorn2.png">
+                            </div>
+                            <div class="col-md-5 pt-4">
+                                <p>Element :  Earth<br>Color : Brown, Black <br>Quality : Cardinal<br> Day : Saturday<br>Ruler : Saturn<br>
+                                    Greatest Compatibility : Cancer, Scorpio and other fellow earth signs<br>Lucky Numbers : 4, 8, 13, 22</p>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="accordion" id="parent">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header ">
+                                            <button type="button" class="accordion-button bg-black text-white" data-bs-toggle="collapse" data-bs-target="#myaccordion1"><p>What house is Capricorn in?</p></button>
+                                        </h2>
+                                        <div class="collapse accordion-collapse " id="myaccordion1" data-bs-parent="#parent">
+                                            <div class="accordion-body bg-black">
+                                                <p>Capricorn is a cardinal, feminine earth sign, ruled by Saturn and associated with the Tenth House of career, reputation, and goals.  </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header ">
+                                            <button type="button" class="accordion-button bg-black text-white" data-bs-toggle="collapse" data-bs-target="#myaccordion2"><p>Which planet does rule Capricorn?</p></button>
+                                        </h2>
+                                        <div class="collapse accordion-collapse " id="myaccordion2" data-bs-parent="#parent">
+                                            <div class="accordion-body bg-black">
+                                                <p>Aries is ruled by the planet Saturn.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header ">
+                                            <button type="button" class="accordion-button bg-black text-white" data-bs-toggle="collapse" data-bs-target="#myaccordion3"><p>What are the favorite things of Capricorn?</p></button>
+                                        </h2>
+                                        <div class="collapse accordion-collapse " id="myaccordion3" data-bs-parent="#parent">
+                                            <div class="accordion-body bg-black">
+                                               <p>Capricorn loves family, tradition, music, understated status and quality craftsmanship.</p> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-8">
+                                <p>Capricorn is a sign that is associated with time and responsibility. Capricorn individuals are typically traditional and serious in nature, possessing an inner sense of independence that allows them to make significant progress in both their personal and professional lives. No other sign can shoulder the weight of the world as Capricorn can.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="11th">
+                        <h5>Aquarius (January 20 - Febuary 18)</h5>
+                        <div class="row">
+                            <div class="col-md-3 ">
+                                <img src="image/aquarius2.png">
+                            </div>
+                            <div class="col-md-5 pt-4">
+                                <p>Element :  Air<br>Color : Light-Blue, Silver <br>Quality : Fixed<br> Day : Saturday<br>Ruler : Uranus, Saturn<br>
+                                    Greatest Compatibility : Leo, Sagittarius and their fellow air signs <br>Lucky Numbers : 4, 7, 11, 22, 29</p>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="accordion" id="parent">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header ">
+                                            <button type="button" class="accordion-button bg-black text-white" data-bs-toggle="collapse" data-bs-target="#myaccordion1"><p>Is Aquarius ruled by two planets?</p></button>
+                                        </h2>
+                                        <div class="collapse accordion-collapse " id="myaccordion1" data-bs-parent="#parent">
+                                            <div class="accordion-body bg-black">
+                                                <p>Yes, Aquarius is ruled by two planets, Uranus and Saturn. </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header ">
+                                            <button type="button" class="accordion-button bg-black text-white" data-bs-toggle="collapse" data-bs-target="#myaccordion2"><p>Is Aquarius the most intelligent sign?</p></button>
+                                        </h2>
+                                        <div class="collapse accordion-collapse " id="myaccordion2" data-bs-parent="#parent">
+                                            <div class="accordion-body bg-black">
+                                                <p>Yes, aquarians are leading the pack when it comes to the most intelligent zodiac signs.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header ">
+                                            <button type="button" class="accordion-button bg-black text-white" data-bs-toggle="collapse" data-bs-target="#myaccordion3"><p>Which house does Aquarius associate with?</p></button>
+                                        </h2>
+                                        <div class="collapse accordion-collapse " id="myaccordion3" data-bs-parent="#parent">
+                                            <div class="accordion-body bg-black">
+                                               <p>Aquarius sign is associated with the Eleventh House of greater communities, friendships, and dreams.</p> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-8">
+                                <p>Aquarius is one of the most unique signs of the zodiac, and people born under this sign experience a sense of uniqueness. This makes them eccentric and energetic in their fight for freedom, or at times shy and quiet, afraid to express their true personality. Aquarius is highly empathetic, but shielded by a cold front. They are deep thinkers and highly intellectual people who love to fight for idealistic causes. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="12th">
+                        <h5>Pisces (Febuary 19 - March 20)</h5>
+                        <div class="row">
+                            <div class="col-md-3 ">
+                                <img src="image/pisces2.png">
+                            </div>
+                            <div class="col-md-5 pt-4">
+                                <p>Element :  Water<br>Color : Mauve, Lilac, Purple, Violet, Sea green <br>Quality : Mutable<br> Day : Thursday<br>Ruler : Neptune, Jupiter<br>
+                                    Greatest Compatibility : Virgo, Taurus and other fellow water signs<br>Lucky Numbers : 3, 9, 12, 15, 18, 24</p>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="accordion" id="parent">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header ">
+                                            <button type="button" class="accordion-button bg-black text-white" data-bs-toggle="collapse" data-bs-target="#myaccordion1"><p>Is Pisces the last zodiac?</p></button>
+                                        </h2>
+                                        <div class="collapse accordion-collapse " id="myaccordion1" data-bs-parent="#parent">
+                                            <div class="accordion-body bg-black">
+                                                <p>Yes, Pisce is the twelfth and final astrological sign in the zodiac.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header ">
+                                            <button type="button" class="accordion-button bg-black text-white" data-bs-toggle="collapse" data-bs-target="#myaccordion2"><p>What are Pisces Weaknesses?</p></button>
+                                        </h2>
+                                        <div class="collapse accordion-collapse " id="myaccordion2" data-bs-parent="#parent">
+                                            <div class="accordion-body bg-black">
+                                                <p>Picses can be fearful, overly trusting, sad and have the desire to escape reality.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header ">
+                                            <button type="button" class="accordion-button bg-black text-white" data-bs-toggle="collapse" data-bs-target="#myaccordion3"><p>Why is the sign Pisces so sensitive?</p></button>
+                                        </h2>
+                                        <div class="collapse accordion-collapse " id="myaccordion3" data-bs-parent="#parent">
+                                            <div class="accordion-body bg-black">
+                                               <p>Pisces is one of the water sign means they tend to be more emotional. They are also highly sensitive, often picking up on how other people feel.</p> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-8">
+                                <p>Pisces is a very friendly sign, often finding themselves in the company of diverse people. Graced with water attributes, Pisces has this eclectic magic, gifted with psychic receptivity and scarily accurate intuition. Plus, they are selfless and always willing to help others, which is admirable as long as they don't expect too much in return.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="offset-md-1 col-md-8">
+            <div class="qanda">
+                <h4 class="mb-4">Frequently asked questions</h4>
+                <div class="accordion" id="parent">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header ">
+                            <button type="button" class="accordion-button bg-black text-white" data-bs-toggle="collapse" data-bs-target="#myaccordion1"><p>What is the first sign in zodiac?</p></button>
+                        </h2>
+                        <div class="collapse accordion-collapse " id="myaccordion1" data-bs-parent="#parent">
+                            <div class="accordion-body bg-black">
+                                <p> Aries is the first astrological sign in the zodiac.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header ">
+                            <button type="button" class="accordion-button bg-black text-white" data-bs-toggle="collapse" data-bs-target="#myaccordion2"><p>Why are libras so dangerous?</p></button>
+                        </h2>
+                        <div class="collapse accordion-collapse " id="myaccordion2" data-bs-parent="#parent">
+                            <div class="accordion-body bg-black">
+                                <p>Libras are the sign of the scales; they are natural mediators, but even the smallest conflict can cause the scales of a shadow Libra to wobble to extremes. One moment they’re cool as a cucumber, and the next they are roasting you right to your face, attacking you where it hurts the most.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header ">
+                            <button type="button" class="accordion-button bg-black text-white" data-bs-toggle="collapse" data-bs-target="#myaccordion3"><p>Which zodiac sign is the most intelligent?</p></button>
+                        </h2>
+                        <div class="collapse accordion-collapse " id="myaccordion3" data-bs-parent="#parent">
+                            <div class="accordion-body bg-black">
+                               <p>Aquarius tend to be the most intelligent sign among all the zodiac signs.</p> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header ">
+                            <button type="button" class="accordion-button bg-black text-white" data-bs-toggle="collapse" data-bs-target="#myaccordion4"><p>Why is the sign Pisces so sensitive?</p></button>
+                        </h2>
+                        <div class="collapse accordion-collapse " id="myaccordion4" data-bs-parent="#parent">
+                            <div class="accordion-body bg-black">
+                               <p>Pisces is one of the water sign means they tend to be more emotional. They are also highly sensitive, often picking up on how other people feel.</p> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header ">
+                            <button type="button" class="accordion-button bg-black text-white" data-bs-toggle="collapse" data-bs-target="#myaccordion5"><p>What are the negative traits of Gemini?</p></button>
+                        </h2>
+                        <div class="collapse accordion-collapse " id="myaccordion5" data-bs-parent="#parent">
+                            <div class="accordion-body bg-black">
+                               <p> Gemini can be two faced, nosy, intense mood swings, impulsive and indecisive.</p> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header ">
+                            <button type="button" class="accordion-button bg-black text-white" data-bs-toggle="collapse" data-bs-target="#myaccordion6"><p>Why are Scorpios so hated?</p></button>
+                        </h2>
+                        <div class="collapse accordion-collapse " id="myaccordion6" data-bs-parent="#parent">
+                            <div class="accordion-body bg-black">
+                               <p>Scorpios are so hated because of their controlling nature and vindictive emotions. Scorpios are master manipulators and know how to get what they want from other people, and often do so through deception.</p> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header ">
+                            <button type="button" class="accordion-button bg-black text-white" data-bs-toggle="collapse" data-bs-target="#myaccordion7"><p>Which zodiac sign is the most mysterious?</p></button>
+                        </h2>
+                        <div class="collapse accordion-collapse " id="myaccordion7" data-bs-parent="#parent">
+                            <div class="accordion-body bg-black">
+                               <p>Scorpio! Scorpio can be intense, passionate, and deeply emotional – often without warning. Scorpios are notoriously private and inscrutable; they rarely let anyone in. Even their closest friends may never get more than a glimpse of the real Scorpio, who tends to keep the deepest secrets close to their chest.</p> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+    <hr style="color:  rgb(175, 175, 175);">
+    <div class="d-flex justify-content-center zzz">
+        <ul class="link">
+            <li><a href="#" >Aries</a></li>
+            <li><a href="#">Taurus</a></li>
+            <li><a href="#">Gemini</a></li>
+            <li><a href="#">Cancer</a></li>
+            <li><a href="#">Leo</a></li>
+            <li><a href="#">Virgo</a></li>
+            <li><a href="#">Libra</a></li>
+            <li><a href="#">Scorpio</a></li>
+            <li><a href="#">Sagittarius</a></li>
+            <li><a href="#">Capricorn</a></li>
+            <li><a href="#">Aquarius</a></li>
+            <li><a href="#">Pisces</a></li>
+        </ul>
+    </div>
+    <hr style="color:  rgb(175, 175, 175);">
+    <footer>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="text_col">
+                        <h2><b>About Page</b></h2>
+                            <p>We provide our customers individualized and accurate astrology readings to assist them learn more about themselves, their relationships, and their life path. </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="text_col">
+                        <h2></b>Contact Info</b></h2>
+                    
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-location-dot"></i> &nbsp;Yangon, Myanmar</a></li>
+                        <li><a href="#"><i class="fa-solid fa-phone"></i> &nbsp;+95 123456778</a></li>
+                        <li><a href="#"><i class="fa-solid fa-envelope"></i> &nbsp;name@gmail.com</a></li>
+                    </ul>
+                    
+                    </div>                    
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="text_col">
+                        <h2><b>Quick Links</b></h2>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="love.html">Love Compatibility</a></li>
+                        <li><a href="zodiacsigns_pbl.html">Zodiac Signs</a></li>
+                        <li><a href="birthchart_pbl.html">Birth Chart</a></li>
+                        <li><a href="abtus.html">About Us</a></li>
+                        <li><a href="premium.html">Premium</a></li>
+                    </ul>
+                    </div>                    
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="text_col">
+                        <h2><b>Subscribe!</b></h2>
+                        <small>Subscribe to get updates about our services and products</small>
+                        <div class="form-floating my-3">
+                            <input type="text" class="form-control form-control-sm rounded-3" placeholder="email">
+                            <label for="floatingInput">example@gmail.com</label>
+                        </div>
+                        <button type="submit" class="btn btn-outline-white btn-block" style="background-color: black; color: white; width: 130px; font-family: 'Dosis', sans-serif;            
+                        border-radius: 20px;">Subscribe &nbsp;<i class="fa-solid fa-arrow-right fa-beat"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <hr class=" text-light">
+
+        <div class="container p-3 pt-0">
+            <div class="row_2 d-flex align-items-center">
+                <div class="col-md-7 col-lg-8 text-center text-md-start">
+                    <div class="p-3 text-light">
+                        2023 Copyright <span>&copy;</span>All rights reserved.
+                    </div>
+                </div>
+                <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+                    <a class="btn btn-outline-light btn-floating m-1" role="button" style=" border-radius: 20px;
+                    ">
+                        <i class="fa-brands fa-pinterest fa-fade"></i>
+                    </a>
+                    <a class="btn btn-outline-light btn-floating m-1" role="button" style=" border-radius: 20px;
+                    ">
+                        <i class="fa-brands fa-facebook fa-fade"></i>
+                    </a>
+                    <a class="btn btn-outline-light btn-floating m-1" role="button" style=" border-radius: 20px;
+                    ">
+                        <i class="fa-brands fa-instagram fa-fade"></i>
+                    </a>
+                    <a class="btn btn-outline-light btn-floating m-1 " role="button" style=" border-radius: 20px;
+                    ">
+                        <i class="fa-brands fa-twitter fa-fade"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+
+    </footer>  
+</body>
+</html>
